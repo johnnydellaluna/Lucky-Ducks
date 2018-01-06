@@ -1,0 +1,26 @@
+.container {
+	background: url("img/pond.jpg");
+	background-size: cover;
+}
+
+.duck {
+	height: 100px;
+	width: 100px;
+}
+
+p {
+	color: white;
+}
+
+.intro {
+	font-family: 'Acme', sans-serif;
+	font-size: 18px;
+	color: black;
+	position: absolute;
+	top: 23%;
+	left: 27%;
+}
+
+.hidden {
+	color: green;
+}
