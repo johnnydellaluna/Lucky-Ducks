@@ -1,0 +1,26 @@
+.container {
+	background: url("img/cave.jpg");
+	background-size: cover;
+}
+
+.duck {
+	height: 100px;
+	width: 100px;
+}
+
+.intro {
+	font-family: 'Creepster', cursive;
+	font-size: 40px;
+	color: white;
+	position: absolute;
+	top: 23%;
+}
+
+.row {
+	height: 150px;
+}
+
+.tears {
+	position: relative;
+	left: 380px;
+}
