@@ -1,5 +1,5 @@
 .container {
-	background: url("img/cave.jpg");
+	background: url("img/heaven.jpg");
 	background-size: cover;
 }
 
@@ -9,9 +9,9 @@
 }
 
 .intro {
-	font-family: 'Creepster', cursive;
+	font-family: 'Cinzel', serif;
 	font-size: 40px;
-	color: red;
+	color: #FFD700;
 	position: absolute;
 	top: 23%;
 	text-shadow:
@@ -25,7 +25,7 @@
 	height: 150px;
 }
 
-.tears {
+.halo {
 	position: relative;
-	left: 380px;
+	left: 260px;
 }
