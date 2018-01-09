@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Win $10 for the WWF</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<script>
+var audio = new Audio("music/gamemusic.mp3");
+audio.play();
+
+// var quack = new Audio("music/quack.mp3");
+// $("#duck").on("click", function() {
+//     quack.play();
+// });
+
+function newGame() {
+
+    var randomDucks = [];
+    var arrayMax = 5;
+    var limit = arrayMax + 1;
+    for (var i = 0; i < arrayMax; i++) {
+        randomDucks.push(Math.floor(Math.random() * limit));
+    }
+
+    console.log(randomDucks);
+
+    for (var i = 0; i < randomDucks.length; i++) {
+        var duckImage = $("<img>");
+        duckImage.addClass("duck-image");
+        duckImage.attr("src", "image/circleduck.png");
+        duckImage.attr("duck-value", randomDucks[i]);
+        $("#main-row").append(duckImage);
+    }
+
+    $("<img>").on("click", function() {
+        var userDuck = ($(this).attr("duck-value"));
+        if (userDuck !== 1) {
+            // go to loser page
+        } else {
+            // go to winner page
+        }
+    })
+}
+
+
+
+
+
+
+
+
+
+//   crystalValue = parseInt(crystalValue);
+//   // We then add the crystalValue to the user's "counter" which is a global variable.
+//   // Every click, from every crystal adds to the global counter.
+//   counter += crystalValue;
+//   var wins = 0;
+//   var losses = 0;
+//   // All of the same game win-lose logic applies. So the rest remains unchanged.
+//   $("#totalscore").text("New score: " + counter);
+//   if (counter === targetNumber) {
+//       wins++;
+//     $("#totalscore").text("You win!");
+//     $("#wins").text(wins);
+//   }
+//   else if (counter >= targetNumber) {
+//       losses++
+//     $("#totalscore").text("Sorry, try again!");
+//     $("#losses").text(losses);
+//   }
+</script>
+
+<body>
+    <div class="container text-center">
+        <div class="header">
+            <br>
+            <img src="img/luckylogo.png">
+            <img src="img/duck.png" height=90px; width=65px>
+            <hr>
+        </div>
+        <div class="row">
+        </div>
+</body>
+</html>

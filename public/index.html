@@ -12,6 +12,16 @@
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
+<script>
+var audio = new Audio("music/gamemusic.mp3");
+audio.play();
+
+// var quack = new Audio("music/quack.mp3");
+// $("#duck").on("click", function() {
+//     quack.play();
+// });
+</script>
+
 <body>
     <div class="container text-center">
         <div class="header">
@@ -24,25 +34,25 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-3">
               <img src="img/thoughtbubble.png" height=303px; width=353px>
-              <p class="intro"><strong>Pick the duck with the money; it's that simple! Start by choosing your prize with one of the links below. You can only play ONE of the games per username per 24 hours.</strong></p>
+              <p class="intro"><strong>Help Chuck the Duck pick the duck with the money! Start by choosing your prize with one of the links below. You can only play ONE of the games per username per 24 hours.</strong></p>
             </div>
             <div class="col-sm-3"></div>
         </div>
         <div class="row">
-            <div class="col-sm-3"><a href="/gameA.html"><button type="button" class="btn btn-warning btn-lg">Game A</button></a>
+            <div class="col-sm-3"><a href="gameA.html"><button type="button" class="btn btn-warning btn-lg">Game A</button></a>
                 <br><br>
                 <p><strong>Win $100 for yourself!<br>1000 ducks to choose from</strong></p></div>
-            <div class="col-sm-3"><img src="img/duck.png" height=290px; width=225px><p>Chuck the Duck</p></div>
+            <div id="duck" class="col-sm-3"><img src="img/duck.png" height=290px; width=225px></div>
             <div class="col-sm-3"></div>
-            <div class="col-sm-3"><a href="/gameB.html"><button type="button" class="btn btn-success btn-lg">Game B</button></a>
+            <div class="col-sm-3"><a href="gameB.html"><button type="button" class="btn btn-success btn-lg">Game B</button></a>
                 <br><br>
                 <p><strong>Win $10 for the World Wildlife Foundation!<br>100 ducks to choose from</strong></p></div>
         </div>
         <br><br><br>
         <footer>
-            <p><strong><a href="https://github.com/johnnydellaluna/Lucky-Ducks" target="_blank">GitHub Repo</a>
+            <p><strong>GitHub Repo: <a href="https://github.com/johnnydellaluna/Lucky-Ducks" target="_blank">https://github.com/johnnydellaluna/Lucky-Ducks</a>
               <br>
-            Logo made with <a href="https://logomakr.com/" target="_blank">www.logomakr.com</a>
+            Logo and duck symbols made with <a href="https://logomakr.com/" target="_blank">www.logomakr.com</a>
             <br>
             Copyright &copy; Johnny Dellaluna 2018</strong></p>
         </footer>
