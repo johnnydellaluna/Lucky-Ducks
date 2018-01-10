@@ -21,10 +21,12 @@ p {
 }
 
 .duck-image {
-	height: 2px;
-	width: 2px;
+	height: 75px;
+	width: 75px;
+	padding: 5px;
 }
 
 h2 {
 	font-family: 'Acme', sans-serif;
+	color: white;
 }

@@ -18,7 +18,6 @@ module.exports = function(app) {
   // });
 
   app.get("/login", function(req, res) {
-    // If the user already has an account send them to the dashboard
     if (req.user) {
       res.redirect("/public/index.html");
     }

@@ -8,73 +8,60 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
-
 <script>
 var audio = new Audio("music/gamemusic.mp3");
 audio.play();
 
-// var quack = new Audio("music/quack.mp3");
-// $("#duck").on("click", function() {
-//     quack.play();
-// });
+$(document).ready(function() {
 
-function newGame() {
 
-    var randomDucks = [];
-    var arrayMax = 5;
-    var limit = arrayMax + 1;
-    for (var i = 0; i < arrayMax; i++) {
-        randomDucks.push(Math.floor(Math.random() * limit));
-    }
+    function newGame() {
 
-    console.log(randomDucks);
-
-    for (var i = 0; i < randomDucks.length; i++) {
-        var duckImage = $("<img>");
-        duckImage.addClass("duck-image");
-        duckImage.attr("src", "image/circleduck.png");
-        duckImage.attr("duck-value", randomDucks[i]);
-        $("#main-row").append(duckImage);
-    }
-
-    $("<img>").on("click", function() {
-        var userDuck = ($(this).attr("duck-value"));
-        if (userDuck !== 1) {
-            // go to loser page
-        } else {
-            // go to winner page
+        var randomDucks = [];
+        var arrayMax = 50;
+        var limit = arrayMax + 1;
+        for (var i = 0; i < arrayMax; i++) {
+            randomDucks.push(Math.floor(Math.random() * limit));
         }
-    })
-}
 
 
+        randomDucks.sort(function(a, b) { return 0.5 - Math.random() });
 
 
+        randomDucks.sort(function(a, b) { return 0.5 - Math.random() });
 
 
+        randomDucks.sort(function(a, b) { return 0.5 - Math.random() });
 
 
+        randomDucks.sort(function(a, b) { return 0.5 - Math.random() });
 
-//   crystalValue = parseInt(crystalValue);
-//   // We then add the crystalValue to the user's "counter" which is a global variable.
-//   // Every click, from every crystal adds to the global counter.
-//   counter += crystalValue;
-//   var wins = 0;
-//   var losses = 0;
-//   // All of the same game win-lose logic applies. So the rest remains unchanged.
-//   $("#totalscore").text("New score: " + counter);
-//   if (counter === targetNumber) {
-//       wins++;
-//     $("#totalscore").text("You win!");
-//     $("#wins").text(wins);
-//   }
-//   else if (counter >= targetNumber) {
-//       losses++
-//     $("#totalscore").text("Sorry, try again!");
-//     $("#losses").text(losses);
-//   }
+        for (var i = 0; i < randomDucks.length; i++) {
+            var mainRow = $("#main-row")
+            var duckImage = $("<img>");
+            duckImage.addClass("duck-image")
+                .attr("src", "img/circleduck.png")
+                .attr("duck-value", randomDucks[i]);
+            duckImage.appendTo(mainRow)
+        }
+
+        $(".duck-image").on("click", function() {
+            var userDuck = ($(this).attr("duck-value"));
+            userDuck = parseInt(userDuck);
+            if (userDuck !== 1) {
+                window.location.href = "loser.html"
+            } else {
+                window.location.href = "winner.html"
+            }
+        })
+    }
+
+    newGame()
+
+})
 </script>
 
 <body>
@@ -85,7 +72,9 @@ function newGame() {
             <img src="img/duck.png" height=90px; width=65px>
             <hr>
         </div>
-        <div class="row">
+        <div id="main-row" class="row">
+            <p><strong>Click on the Lucky Duck!<br>You only have one click, so make it a good one!</strong></p>
         </div>
 </body>
+
 </html>
