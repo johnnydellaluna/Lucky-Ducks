@@ -24,3 +24,7 @@ p {
 	height: 2px;
 	width: 2px;
 }
+
+h2 {
+	font-family: 'Acme', sans-serif;
+}
