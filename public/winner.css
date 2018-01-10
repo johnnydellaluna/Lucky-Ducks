@@ -12,8 +12,8 @@
 	font-family: 'Cinzel', serif;
 	font-size: 30px;
 	color: #FFD700;
-	position: absolute;
-	top: 23%;
+	/*position: absolute;
+	top: 23%;*/
 	text-shadow:
 		-1px -1px 0 #000,
 		1px -1px 0 #000,
@@ -26,6 +26,6 @@
 }
 
 .halo {
-	position: relative;
-	left: 260px;
+	position: absolute;
+	left: 240px;
 }
