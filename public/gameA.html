@@ -22,6 +22,7 @@ $(document).ready(function() {
 
         var randomDucks = [];
         var arrayMax = 150;
+        var counter = 7;
         var limit = arrayMax + 1;
         for (var i = 0; i < arrayMax; i++) {
             randomDucks.push(Math.floor(Math.random() * limit));
@@ -45,15 +46,20 @@ $(document).ready(function() {
             duckImage.addClass("duck-image")
                 .attr("src", "img/circleduck.png")
                 .attr("duck-value", randomDucks[i]);
-            duckImage.appendTo(mainRow)
+            duckImage.appendTo(mainRow);
         }
 
         $(".duck-image").on("click", function() {
             var userDuck = ($(this).attr("duck-value"));
             userDuck = parseInt(userDuck);
-            if (userDuck !== 1) {
+            // counter--;
+            if (counter--) {
+               $("#top").text("Wrong duck! You have " + counter + " clicks left!") 
+            };
+            
+            if (counter === 0 && userDuck !== 1) {
                 window.location.href = "loser.html"
-            } else {
+            } else if (userDuck === 1) {
                 window.location.href = "winner.html"
             }
         })
@@ -71,9 +77,9 @@ $(document).ready(function() {
             <img src="img/luckylogo.png">
             <img src="img/duck.png" height=90px; width=65px>
             <hr>
+            <div class="row" id="top"><p><strong>Click on the Lucky Duck!<br></strong></p></div>
         </div>
         <div id="main-row" class="row">
-            <h2><strong>Click on the Lucky Duck!<br>You only have one click, so make it a good one!</strong></h2>
         </div>
 </body>
 
