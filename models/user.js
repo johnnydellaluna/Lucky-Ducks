@@ -30,20 +30,6 @@ module.exports = function(sequelize, DataTypes) {
         len: [1,20]
       }
     },
-    last_visit_time: {
-      type: DataTypes.DATE,
-      allowNull: true,
-      validate: {
-        len: [1,6]
-      }
-    },
-    last_logged_site: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      validate: {
-        len: [1]
-      }
-    },
     logs_site_A: {
       type: DataTypes.INTEGER,
       allowNull: true,
@@ -52,7 +38,11 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: true
     },
-    lifetime_logs: {
+    total_wins: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    total_losses: {
       type: DataTypes.INTEGER,
       allowNull: true
     },

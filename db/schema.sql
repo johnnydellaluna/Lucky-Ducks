@@ -7,10 +7,9 @@ CREATE TABLE user
 	username VARCHAR (20),
 	email VARCHAR (40),
 	password VARCHAR (20),
-	last_visit_time DATE,
-	last_logged_site VARCHAR (1),
 	logs_site_A INTEGER,
 	logs_site_B INTEGER,
-	lifetime_logs INTEGER,
+	total_wins INTEGER,
+	total_losses INTEGER,
 	PRIMARY KEY (id)
 );
