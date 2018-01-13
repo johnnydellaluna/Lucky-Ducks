@@ -8,7 +8,7 @@ module.exports = function(app) {
     res.json("..public/index.html");
   });
 
-  app.post("/api/register", function(req, res) {
+  app.post("/api/login", function(req, res) {
     db.User.create({
       username: req.body.username,
       email: req.body.email,
