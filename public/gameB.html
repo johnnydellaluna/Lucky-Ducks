@@ -51,9 +51,11 @@ $(document).ready(function() {
 
 
         $(".duck-image").on("click", function() {
+            var quack = new Audio("music/quack.mp3");
+            quack.play();
             var userDuck = ($(this).attr("duck-value"));
             userDuck = parseInt(userDuck);
-            var userImage = ($(this).attr("src", "img/circleduck.png"))
+            var userImage = ($(this).attr("src", "img/circleduck.png"));
             // counter--;
             if (counter--) {
                $("#top").text("Wrong duck! You have " + counter + " clicks left!");

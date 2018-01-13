@@ -6,9 +6,9 @@ var isAuthenticated = require("../config/authentication");
 // =============================================================
 module.exports = function(app) {
 
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
-  });
+  // app.get("/", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/index.html"));
+  // });
 
   // app.get("/register", function(req, res) {
   //   if (req.user) {
@@ -17,9 +17,10 @@ module.exports = function(app) {
   //   res.sendFile(path.join(__dirname, "../public/register.html"));
   // });
 
-  app.get("/login", function(req, res) {
+  app.get("/", function(req, res) {
     if (req.user) {
-      res.redirect("/public/home.html");
+      console.log("logged in user", req.user)
+      res.redirect("/home.html");
     }
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });

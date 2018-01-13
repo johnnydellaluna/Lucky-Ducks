@@ -36,11 +36,6 @@ $(document).ready(function() {
         }).catch(handleLoginErr);
     }
 
-    function handleLoginErr(err) {
-        $("#alert .msg").text(err.responseJSON);
-        $("#alert").fadeIn(500);
-    };
-
     loginForm.on("submit", function(event) {
         event.preventDefault();
         var userData = {
@@ -58,17 +53,16 @@ $(document).ready(function() {
         loginPassword.val("");
     });
 
-    // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
     function loginUser(email, password) {
         $.post("/api/login", {
             email: email,
             password: password
-        }).then(function(data) {
+        }).then(function(data, err) {
+            // if (err) {
+            //     alert("Please enter a valid email and password or register!")
+            // }
             window.location.replace(data);
-            // If there's an error, log the error
-        }).catch(function(err) {
-            alert("Please enter a valid username and password.")
-        });
+        })
     }
 
 

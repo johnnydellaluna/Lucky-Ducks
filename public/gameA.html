@@ -50,6 +50,8 @@ $(document).ready(function() {
         }
 
         $(".duck-image").on("click", function() {
+            var quack = new Audio("music/quack.mp3");
+            quack.play();
             var userDuck = ($(this).attr("duck-value"));
             userDuck = parseInt(userDuck);
             var userImage = ($(this).attr("src", "img/circleduck.png"))
