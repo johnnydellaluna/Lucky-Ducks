@@ -27,7 +27,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1,20]
+        len: [1,99]
       }
     },
     logs_site_A: {
@@ -47,7 +47,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true
     },
   }, {
-    timestamps: true,
+    timestamps: false,
     freezeTableName: true
   });
 

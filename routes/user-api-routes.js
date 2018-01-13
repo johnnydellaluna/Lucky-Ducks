@@ -5,10 +5,10 @@ var passport = require("../config/passport");
 module.exports = function(app) {
   // PASSPORT
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
-    res.json("..public/index.html");
+    res.json("/home.html");
   });
 
-  app.post("/api/login", function(req, res) {
+  app.post("/api/register", function(req, res) {
     db.User.create({
       username: req.body.username,
       email: req.body.email,

@@ -9,6 +9,7 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="home.css">
 </head>
 
@@ -21,32 +22,32 @@
         </div>
         <div class="row">
             <div class="col-sm-4">
-                <form>
+                <form id="loginForm">
                     <div class="form-group">
                         <h2>Returning Players</h2>
-                        <label for="exampleInputEmail1"><p>Email address</p></label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <label for="loginEmail"><p>Email address</p></label>
+                        <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Enter email">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1"><p>Password</p></label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <label for="loginPassword"><p>Password</p></label>
+                        <input type="password" class="form-control" id="loginPassword" placeholder="Password">
                     </div>
                     <button type="submit" class="btn btn-warning">Login</button>
                 </form>
             </div>
             <div class="col-sm-4"><img src="img/circleduck.png" height=250px; width=265px></div>
             <div class="col-sm-4">
-                <form>
+                <form id="registerForm">
                     <div class="form-group">
                         <h2>Haven't Played Before?</h2>
-                        <label for="exampleInputName"><p>Username</p></label>
-                        <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Enter username">
+                        <label for="registerUsername"><p>Username</p></label>
+                        <input type="text" class="form-control" id="registerUsername" aria-describedby="emailHelp" placeholder="Enter username">
                         <label for="exampleInputEmail1"><p>Email address</p></label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <input type="email" class="form-control" id="registerEmail" aria-describedby="emailHelp" placeholder="Enter email">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1"><p>Password</p></label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <input type="password" class="form-control" id="registerPassword" placeholder="Password">
                     </div>
                     <button type="submit" class="btn btn-success" id="register-button">Register</button>
                 </form>
