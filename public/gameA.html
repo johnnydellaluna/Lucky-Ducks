@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Win $25</title>
+    <title>Win $5</title>
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -52,9 +52,11 @@ $(document).ready(function() {
         $(".duck-image").on("click", function() {
             var userDuck = ($(this).attr("duck-value"));
             userDuck = parseInt(userDuck);
+            var userImage = ($(this).attr("src", "img/circleduck.png"))
             // counter--;
             if (counter--) {
-               $("#top").text("Wrong duck! You have " + counter + " clicks left!") 
+               $("#top").text("Wrong duck! You have " + counter + " clicks left!");
+               userImage.attr("src", "img/redx.png");
             };
             
             if (counter === 0 && userDuck !== 1) {
