@@ -10,7 +10,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="loser.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
+
+<script>
+var audio = new Audio("music/fire.mp3");
+audio.play();
+</script>
 
 <body>
     <div class="container text-center">
@@ -21,7 +27,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <p class="intro"><strong>Looks like it's duck soup for dinner!<br>You lose - now try again.</strong></p>
+                <p class="intro animated zoomIn"><strong>Looks like it's duck soup for dinner!<br>You lose - now try again.</strong></p>
             </div>
         </div>
         <div class="row">
@@ -29,7 +35,7 @@
         </div>
         <div class="row">
             <div class="col-sm-3"></div>
-            <div class="col-sm-3"><img src="img/badduck.png" height=290px width=225px></div>
+            <div class="col-sm-3"><img class=" animated tada infinite" src="img/badduck.png" height=290px width=225px></div>
             <div class="col-sm-3"></div>
             <div class="col-sm-3"></div>
         </div>

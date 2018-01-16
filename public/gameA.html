@@ -10,6 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
 <script>
 var audio = new Audio("music/gamemusic.mp3");
@@ -21,9 +22,12 @@ $(document).ready(function() {
     function newGame() {
 
         var randomDucks = [];
-        var arrayMax = 300;
+        var arrayMax = 250;
         var counter = 7;
         var limit = arrayMax + 1;
+        var userWins = 0;
+        var userLosses = 0;
+
         for (var i = 0; i < arrayMax; i++) {
             randomDucks.push(Math.floor(Math.random() * limit));
         }
@@ -43,7 +47,7 @@ $(document).ready(function() {
         for (var i = 0; i < randomDucks.length; i++) {
             var mainRow = $("#main-row")
             var duckImage = $("<img>");
-            duckImage.addClass("duck-image")
+            duckImage.addClass("duck-image").addClass("animated pulse infinite")
                 .attr("src", "img/circleduck.png")
                 .attr("duck-value", randomDucks[i]);
             duckImage.appendTo(mainRow);
@@ -62,11 +66,15 @@ $(document).ready(function() {
             };
             
             if (counter === 0 && userDuck !== 1) {
+                userLosses++;
                 window.location.href = "loser.html"
             } else if (userDuck === 1) {
+                userWins++;
                 window.location.href = "winner.html"
             }
+
         })
+        console.log("Losses: " + userLosses + ", Wins: " + userWins)
     }
 
     newGame()

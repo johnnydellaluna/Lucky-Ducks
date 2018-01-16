@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
 
 <script>
@@ -21,21 +23,21 @@ audio.play();
     <div class="container text-center">
         <div class="header">
             <br>
-            <img src="img/luckylogo.png">
+            <img class="animated rubberBand" src="img/luckylogo.png">
             <hr>
         </div>
         <div class="row">
           <div class="col-sm-12">
-            <img src="img/instructions.png" height=303px; width=333px>
+            <img class="animated pulse infinite" src="img/instructions.png" height=303px; width=333px>
             </div>
         </div>
                 <br><br><br><br><br>
         <div class="row">
-            <div class="col-sm-4"><a href="gameA.html"><button type="button" class="btn btn-warning btn-lg">Game A</button></a>
+            <div class="col-sm-4"><a href="gameA.html"><button type="button" class="btn btn-warning btn-lg" id="gameA">Game A</button></a>
                 <br><br>
                 <p><strong>Win $5 for yourself!<br>Harder odds</strong></p></div>
-            <div class="col-sm-4"><img src="img/duck.png" height=290px; width=225px></div>
-            <div class="col-sm-4"><a href="gameB.html"><button type="button" class="btn btn-success btn-lg">Game B</button></a>
+            <div class="col-sm-4"><img class="animated lightSpeedIn" src="img/duck.png" height=290px; width=225px></div>
+            <div class="col-sm-4"><a href="gameB.html"><button type="button" class="btn btn-success btn-lg" id="gameB">Game B</button></a>
                 <br><br>
                 <p><strong>Win $1 for the World Wildlife Foundation!<br>Easier odds</strong></p></div>
         </div>
