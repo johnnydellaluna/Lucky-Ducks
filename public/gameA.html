@@ -61,10 +61,10 @@ $(document).ready(function() {
             var userImage = ($(this).attr("src", "img/circleduck.png"))
             // counter--;
             if (counter--) {
-               $("#top").text("Wrong duck! You have " + counter + " clicks left!");
-               userImage.attr("src", "img/redx.png");
+                $("#top").text("Wrong duck! You have " + counter + " clicks left!");
+                userImage.attr("src", "img/redx.png");
             };
-            
+
             if (counter === 0 && userDuck !== 1) {
                 userLosses++;
                 window.location.href = "loser.html"
@@ -88,11 +88,23 @@ $(document).ready(function() {
             <br>
             <img src="img/luckylogo.png">
             <img src="img/duck.png" height=90px; width=65px>
-            <div class="row" id="top"><p><strong>Click on the Lucky Duck!<br></strong></p></div>
+            <div class="row" id="top">
+                <p><strong>Click on the Lucky Duck!<br></strong></p>
+            </div>
             <hr>
         </div>
         <div id="main-row" class="row">
         </div>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112540659-2"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-112540659-2');
+        </script>
 </body>
 
 </html>

@@ -4,11 +4,11 @@ var nightmare = Nightmare({ show: true });
 
 nightmare
   .goto("http://localhost:3000/")
-  .type("input#exampleInputName", "jimmyneutron")
-  .type("input#exampleInputEmail1", "jimmy@thelab.com")
-  .type("input#exampleInputPassword1", "goddard")
+  .type("input#registerUsername", "jimmyneutron")
+  .type("input#registerEmail", "jimmy@thelab.com")
+  .type("input#registerPassword", "goddard")
   .click("#register-button")
-  .goto("http://localhost:3000/home")
+  .goto("http://localhost:3000/home.html")
   .evaluate(function() {
     return document.querySelector(".container text-center");
   })
